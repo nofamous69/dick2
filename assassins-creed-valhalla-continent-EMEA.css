@@ -1,0 +1,94 @@
+/* hide the uplay and steelbook editions cards on emea locales*/
+body:not(.isMobile).emea .edition--uplay,
+body:not(.isMobile).emea .edition--steelbook{
+  display: none;
+}
+/*handle card selection position*/
+.emea.isMobile .edition--standard {
+    grid-column-start: 1;
+}
+.emea.isMobile .edition--gold {
+    grid-column-start: 2;
+}
+.emea.isMobile .edition--ultimate {
+    grid-column-start: 3;
+}
+
+.emea.isMobile .edition--collector {
+    grid-column-start: 4;
+}
+
+.emea.isMobile .edition--uplay {
+  visibility: hidden;
+  grid-column-start: 6;
+}
+
+.emea.isMobile .edition--steelbook {
+    visibility: hidden;
+    grid-column-start: 5;
+}
+
+/* hide the collector's edition cards for some locales on desktop */
+body:not(.isMobile).ar-ae .edition--collector,
+body:not(.isMobile).zh-tw .edition--collector,
+body:not(.isMobile).ja-jp .edition--collector,
+body:not(.isMobile).ko-kr .edition--collector {
+  display: none;
+}
+/*handle card selection transitionX on mobile */
+.ar-ae.isMobile .edition--collector,
+.zh-tw.isMobile .edition--collector,
+.ja-jp.isMobile .edition--collector,
+.ru-ru.isMobile .edition--collector,
+.ko-kr.isMobile .edition--collector {
+  visibility: hidden;
+}
+
+.emea.isMobile .buyCards__wrapper {
+    grid-template-columns: repeat(6, 340px);
+}
+
+/* hide the 5th line, which is corresponding to the collector edition for some locales */
+/*.ar-ae .buyCards__card .card-5,
+.zh-tw .buyCards__card .card-5,
+.ja-jp .buyCards__card .card-5,
+.ko-kr .buyCards__card .card-5 {
+  display: none;
+}*/
+
+/* keep cards height consistent */
+.emea .buyCards__card .accordionList__container {
+  min-height: 156px;
+}
+
+/* remove price message */
+.emea .buyCards__card .buyCards__card__price {
+  display: none;
+}
+
+/*remove border for 5T3LQZMd2iKvpfCPSOAPqP news*/
+div[data-ccid="5T3LQZMd2iKvpfCPSOAPqP"] img {
+  border: none;
+}
+
+/*remove border for UpzcSW9tkXBC19j506Sii news*/
+div[data-ccid="UpzcSW9tkXBC19j506Sii"] img {
+  border: none;
+}
+
+body.ar-ae {
+    direction: rtl;
+}
+
+.globalNavigation__logo {
+  z-index: 1001;
+}
+
+.ki-c-promo-offset-alt a.promo__wrapper__content__btn {
+    margin-top: 10px !important;
+
+}
+
+
+
+
